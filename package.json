@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prestart": "npx browserslist@latest --update-db yes",
     "dev": "next dev",
+    "dev:lan": "sh ./LAN-server.sh",
     "build": "next build",
     "start": "next start",
     "export": "next export"
