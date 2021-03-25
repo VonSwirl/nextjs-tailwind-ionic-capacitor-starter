@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "update:caniuse": "npx browserslist@latest --update-db yes",
     "prestart": "npx browserslist@latest --update-db yes",
     "dev": "next dev",
     "dev:lan": "sh ./LAN-server.sh",
@@ -19,6 +20,7 @@
     "@ionic/react-router": "^5.5.2",
     "autoprefixer": "^10.1.0",
     "capacitor-dark-mode": "^1.0.5",
+    "capacitor-google-fit": "^0.2.3",
     "classnames": "^2.2.6",
     "next": "10.0.3",
     "postcss": "^8.2.1",
