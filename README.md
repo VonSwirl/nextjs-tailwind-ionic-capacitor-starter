@@ -6,7 +6,8 @@ This repo is a conceptual starting point for building an iOS, Android, and Progr
 
 Next.js handles the production React app experience, Tailwind can be used to style each page of your app, Ionic Framework provides the cross-platform system controls (navigation/transitions/tabs/etc.), and then Capacitor bundles all of it up and runs it on iOS, Android, and Web with full native access.
 
-See this blog post for an overview of the stack and how it all works: https://dev.to/ionic/build-mobile-apps-with-tailwind-css-next-js-ionic-framework-and-capacitor-3kij
+See this blog post for an overview of the stack and how it all works: https://dev.to/ionic/build-mobile-apps-with-tailwind-css-next-js-ionic-framework-and-capacitor-3kij![layers](https://user-images.githubusercontent.com/24437988/112493886-739b0d80-8d7a-11eb-8dc4-158c3938fb99.png)
+
 
 Please note: this repo isn't quite production ready as-is. Users will want to configure tailwind purging as a first step, and note SSR is currently disabled for the Next.js app as the app will be fully client-side rendered for iOS and Android. This is a limitation we are working to address in a future update.
 
