@@ -8,7 +8,7 @@
     "dev": "next dev",
     "dev:lan": "sh ./LAN-server.sh",
     "build": "next build",
-    "start": "next start",
+    "start": "next build && next start",
     "export": "next export"
   },
   "dependencies": {

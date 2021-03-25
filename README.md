@@ -21,28 +21,84 @@ Must have the following installed on your machine.
 
 - node
 - npm
+- Android development [Android Studio](https://developer.android.com/studio)
+- IOS development on **Mac** requires Xcode 11 or above.
+- IOS development on **Windows** [Ionic Appflow](https://ionic.io/appflow) or other alternative emulator
 
 </br>
 
 ### **Initial Setup**
 
-</br>
-
-    NOTE: Order is important!
+There are a few steps that need to be following in order to get this project to initialise succesfully.
 
 </br>
 
-- Run these commands in project root
+First we need the Ionic Client.
+
 - `npm install -g @ionic/cli`
+
+</br>
+
+Now lets install all the dependencies.
+
 - `npm i`
-- `npm run build` - _required to init /out directory_
+
+</br>
+
+We will then need to run the build which will create the .next build folder in or project.
+
+- `npm run build`
+
+</br>
+
+This next step is crucial!
+We to export our build as static which can be run standalone without the need of a Node.js server.
+But also it creates the out directory that we need before we can include our native device builds.
+
+- `npm run export`
+
+</br>
+
+Ok so now we can let Capacitor which platforms we want to build on.
+
+- `npx cap add ios`
+- `npx cap add android`
+
+</br>
+
+Time to rebuild nextjs, export it, and copy it to the native projects.
+
+- `npm run build`
 - `npm run export`
 - `npx cap copy`
+
+</br>
+
+### **Test Builds**
+
+</br>
+
+[Test Web:](https://nextjs.org/docs/api-reference/cli#production)
+
+- `npm run start`
+
+</br>
+
+[Test IOS:](https://capacitorjs.com/docs/getting-started/dependencies#ios-development)
+
 - `npx cap open ios`
+
+</br>
+
+[Test Android:](https://capacitorjs.com/docs/getting-started/dependencies#android-development)
+
+- `npx cap open android`
+
+## Tadaa!
 
 </br>
 
 ## Running App
 
-- Development: `TODO:`
+- Development: `npm run dev`
 - Production: `TODO:`
