@@ -98,7 +98,20 @@ Time to rebuild nextjs, export it, and copy it to the native projects.
 
 </br>
 
-## Running App
+## Running App Environments
 
-- Development: `npm run dev`
-- Production: `TODO:`
+- Cross Platform Development: `npm run dev`
+
+- Web Production: `npm run start`
+
+- IOS Emulator (Mac Only): `npx cap open ios`
+
+- Andriod Emulator: `npx cap open android`
+
+</br>
+
+# Develop
+
+## Reading List
+
+- [Capacitor Workflow](https://capacitorjs.com/docs/basics/workflow)
