@@ -19,9 +19,9 @@ else
   sleep 2;
   npx cap sync android && npx cap open android;
   echo "";
-  echo "----";
+  echo "----------------------";
   echo "ANDROID OPENED IN IDE";
-  echo "----";
+  echo "----------------------";
 
 fi
 sleep 1;
