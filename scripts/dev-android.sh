@@ -1,34 +1,29 @@
-# npm i && npm run build && npm run export && npx cap copy && npx cap sync && npx cap open android
+sleep 1;
+echo "";
+echo "STARTING ANDROID";
+echo "------------------";
+echo "";
+sleep 1;
+echo "Checking for Android App:";
+sleep 2;
 
-# npm run build then # Build latest
-
-# npm i then # Install deps
-
-if [ ! -d "out" ];
+if [ ! -d "android" ];
 then
-  echo "\nCannot Locate our dir, Triggering initial build steps \n";  
-  npm install -g @ionic/cli then
-  npm i; then
-  npm run build; then
-  npm run export; then
-  npx cap add ios; then
-  npx cap add android; then
-  npm run build; then
-  npm run export; then
-  npx cap copy; then
-fi
-
-
-
-if [ -d "android" ];
-then
-  echo "\nAndroid App Found...\n";
-
-  npm run build then # Build latest
-  npm run export # 
-
+  echo "";
+  echo "  --> No Android App Found. Try running...";
+  echo "";
+  echo "      npm run build:all";
 else
-  echo "\nCannot Locate Android App...\n";
+  echo "  --> Android App Found";
+  echo "";
+  sleep 2;
+  npx cap sync android && npx cap open android;
+  echo "";
+  echo "----";
+  echo "ANDROID OPENED IN IDE";
+  echo "----";
 
-  # ls -l	#list with long format - show permissions
 fi
+sleep 1;
+echo "";
+

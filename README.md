@@ -39,11 +39,37 @@ There are 6 steps that need to be following in order to get this project to init
 
 Note: The steps follow can be triggered with command a single command: `npm run build:all`
 
+Caveat: After everything is built open file `./android/app/build.gradle`
+
+Then you will see an object
+
+```gradle
+android {
+   ...
+   defaultConfig {
+      ...
+   }
+}
+```
+
+Now add this block INSIDE defaultConfig (If not already there)
+
+```gradle
+aaptOptions {
+   // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
+   // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
+   ignoreAssetsPattern '!.svn:!.git:!.ds_store:!_.scc:._:!CVS:!thumbs.db:!picasa.ini:!\*~'
+}
+```
+
+Read More: [TL;DR](https://github.com/ionic-team/capacitor/commit/c23d99315acea2f0894e5ff8a08dd42a867b2982)
+
 </br>
 
 1. First we need the Ionic Client.
 
 - `npm install -g @ionic/cli`
+- `npm install -g @ionic/cli native-run`
 
 </br>
 
@@ -125,3 +151,4 @@ When adding plugins to Capacitor it is essential that you perform the following 
 - `npx cap sync`
 
 </br>
+````
