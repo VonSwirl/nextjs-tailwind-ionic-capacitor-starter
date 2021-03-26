@@ -25,7 +25,7 @@ echo "\n-------------------------";
 echo "Exporting Build Directory";
 echo "-------------------------";
 sleep 2;
-npm run export;
+next export;
 
 echo "\nChecking for Android App:";
 sleep 2;
@@ -58,7 +58,7 @@ then
   echo "  --> Yes. Rebuilding now";
   sleep 3;
   next build &&
-  npm run export &&
+  next export &&
   npx cap copy;
   sleep 2; 
   echo "\nSyncing Capacitor Now...\n";

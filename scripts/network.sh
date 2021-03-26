@@ -5,7 +5,7 @@ PORT=3000;
 
 if [[ $LAN_ADDRESS =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]];
 then
-   npm run prestart && next dev -p {$PORT} -H ${LAN_ADDRESS};
+   next dev -p {$PORT} -H ${LAN_ADDRESS};
 else
-   npm run prestart && npm run dev;
+   npm run dev;
 fi

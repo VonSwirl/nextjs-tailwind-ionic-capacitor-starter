@@ -4,8 +4,6 @@
   "private": true,
   "scripts": {
     "build:all": "sh ./scripts/all.sh",
-    "update:caniuse": "npx browserslist@latest --update-db yes",
-    "prestart": "npx browserslist@latest --update-db yes",
     "dev": "next dev",
     "dev:network": "sh ./scripts/network.sh",
     "dev:android": "sh ./scripts/dev-android.sh",
