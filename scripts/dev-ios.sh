@@ -1,0 +1,2 @@
+"dev:andriod": npm i && npm run build npm run export && npx cap copy && npx cap sync && npx cap open android
+"dev:ios": npm i && npm run build npm run export && npx cap copy && npx cap sync && npx cap open ios

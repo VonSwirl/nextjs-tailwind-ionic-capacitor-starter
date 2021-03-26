@@ -3,16 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "init": "sh ./scripts/init.sh",
     "update:caniuse": "npx browserslist@latest --update-db yes",
     "prestart": "npx browserslist@latest --update-db yes",
     "dev": "next dev",
-    "dev:lan": "sh ./LAN-server.sh",
+    "dev:lan": "sh ./scripts/LAN-server.sh",
+    "dev:android": "sh ./scripts/dev-android.sh",
+    "dev:ios": "sh ./scripts/dev-ios.sh",
     "build": "next build",
     "start": "next build && next start",
     "export": "next export"
   },
   "dependencies": {
-    "@capacitor/android": "^2.4.6",
+    "@capacitor/android": "^2.4.7",
     "@capacitor/cli": "^2.4.5",
     "@capacitor/core": "^2.4.5",
     "@capacitor/ios": "^2.4.5",
@@ -32,7 +35,8 @@
     "react-dom": "17.0.1",
     "react-router-dom": "^5.2.0",
     "react-virtuoso": "^1.1.1",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.0.2",
+    "then": "^0.0.1"
   },
   "devDependencies": {
     "ionicons": "^5.2.3",
