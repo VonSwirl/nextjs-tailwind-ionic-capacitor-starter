@@ -58,7 +58,7 @@ Now add this block INSIDE defaultConfig (If not already there)
 aaptOptions {
    // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
    // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
-   ignoreAssetsPattern '!.svn:!.git:!.ds_store:!_.scc:._:!CVS:!thumbs.db:!picasa.ini:!\*~'
+   ignoreAssetsPattern '!.svn:!.git:!.ds_store:!_.scc:._:!CVS:!thumbs.db:!picasa.ini:!*~'
 }
 ```
 
