@@ -6,8 +6,10 @@ This is an Ionic - Nextjs - Tailwind - Capacitor App for educational purposes.
 
 </br>
 
+
 _Stack Framework Layers_
 ![layers](https://user-images.githubusercontent.com/24437988/112493886-739b0d80-8d7a-11eb-8dc4-158c3938fb99.png)
+
 
 ## **Demo**
 
@@ -50,6 +52,7 @@ We will then need to run the build which will create the .next build folder in o
 - `npm run build`
 
 </br>
+
 
 This next step is crucial!
 We to export our build as static which can be run standalone without the need of a Node.js server.
@@ -122,3 +125,4 @@ When adding plugins to Capacitor it is essential that you perform the following 
 
 - [Capacitor Workflow](https://capacitorjs.com/docs/basics/workflow)
 - [Using Cordova Plugins and Ionic Native](https://capacitorjs.com/docs/cordova/using-cordova-plugins)
+
