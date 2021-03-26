@@ -37,7 +37,7 @@ Must have the following installed on your machine.
 
 There are 6 steps that need to be following in order to get this project to initialise succesfully.
 
-Note: The steps follow can be triggered with command a single command: `npm run init`
+Note: The steps follow can be triggered with command a single command: `npm run build:all`
 
 </br>
 

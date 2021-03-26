@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "init": "sh ./scripts/init.sh",
+    "build:all": "sh ./scripts/all.sh",
     "update:caniuse": "npx browserslist@latest --update-db yes",
     "prestart": "npx browserslist@latest --update-db yes",
     "dev": "next dev",
