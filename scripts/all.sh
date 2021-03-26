@@ -75,16 +75,21 @@ fi
 
 sleep 1;
 
-echo "\n---------------------";
+echo "";
+echo "---------------------";
 echo "App Builds Successful";
-echo "---------------------\n\n";
+echo "---------------------";
+echo "";
+echo "";
 echo "COMMANDS:";
-echo "------------------------------------";
-echo "Run Web:       npm run dev";
+echo "----------------------------------------";
+echo "Web:             npm run dev";
 echo "";
-echo "Run IOS:       npx cap open ios";
+echo "IOS:             npm run dev:ios";
 echo "";
-echo "Run Android:   npx cap open android";
-echo "------------------------------------";
+echo "Android:         npm run dev:android";
 echo "";
+echo "Web on Network:  npm run dev:network";
+echo "----------------------------------------";
 echo "";
+

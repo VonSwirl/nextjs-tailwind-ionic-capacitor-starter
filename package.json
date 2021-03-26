@@ -7,7 +7,7 @@
     "update:caniuse": "npx browserslist@latest --update-db yes",
     "prestart": "npx browserslist@latest --update-db yes",
     "dev": "next dev",
-    "dev:lan": "sh ./scripts/LAN-server.sh",
+    "dev:network": "sh ./scripts/network.sh",
     "dev:android": "sh ./scripts/dev-android.sh",
     "dev:ios": "sh ./scripts/dev-ios.sh",
     "build": "next build",
