@@ -110,8 +110,15 @@ Time to rebuild nextjs, export it, and copy it to the native projects.
 
 </br>
 
-# Develop
+# **Development**
+
+When adding plugins to Capacitor it is essential that you perform the following command
+
+- `npx cap sync`
+
+</br>
 
 ## Reading List
 
 - [Capacitor Workflow](https://capacitorjs.com/docs/basics/workflow)
+- [Using Cordova Plugins and Ionic Native](https://capacitorjs.com/docs/cordova/using-cordova-plugins)
