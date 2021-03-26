@@ -13,7 +13,7 @@ import {
   IonToolbar,
 } from '@ionic/react';
 import { useContext, useEffect, useState } from 'react';
-import { cog, flash, list } from 'ionicons/icons';
+import { cog, flash, list, heart } from 'ionicons/icons';
 import { useHistory, useLocation } from 'react-router-dom';
 
 const pages = [
@@ -21,6 +21,11 @@ const pages = [
     title: 'Feed',
     icon: flash,
     url: '/tabs/feed',
+  },
+  {
+    title: 'Health',
+    icon: heart,
+    url: '/tabs/health',
   },
   {
     title: 'Lists',

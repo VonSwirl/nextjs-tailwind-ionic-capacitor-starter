@@ -1,65 +1,128 @@
-# Next.js + Tailwind CSS + Ionic Framework + Capacitor Mobile Starter
+# **Ionic - Nextjs - Tailwind - Capacitor**
 
-![Screenshot](./screenshot.png)
+## **Description**
 
-This repo is a conceptual starting point for building an iOS, Android, and Progressive Web App with Next.js, Tailwind CSS, Ionic Framework, and Capacitor.
+This is an Ionic - Nextjs - Tailwind - Capacitor App for educational purposes.
 
-Next.js handles the production React app experience, Tailwind can be used to style each page of your app, Ionic Framework provides the cross-platform system controls (navigation/transitions/tabs/etc.), and then Capacitor bundles all of it up and runs it on iOS, Android, and Web with full native access.
-
-See this blog post for an overview of the stack and how it all works: https://dev.to/ionic/build-mobile-apps-with-tailwind-css-next-js-ionic-framework-and-capacitor-3kij![layers](https://user-images.githubusercontent.com/24437988/112493886-739b0d80-8d7a-11eb-8dc4-158c3938fb99.png)
+</br>
 
 
-Please note: this repo isn't quite production ready as-is. Users will want to configure tailwind purging as a first step, and note SSR is currently disabled for the Next.js app as the app will be fully client-side rendered for iOS and Android. This is a limitation we are working to address in a future update.
+_Stack Framework Layers_
+![layers](https://user-images.githubusercontent.com/24437988/112493886-739b0d80-8d7a-11eb-8dc4-158c3938fb99.png)
 
-## Usage
 
-This project is a standard Next.js app, so the typical Next.js development process applies (`npm run dev` for browser-based development). However, there is one caveat: the app must be exported to deploy to iOS and Android, since it must run purely client-side. ([more on Next.js export](https://nextjs.org/docs/advanced-features/static-html-export))
+## **Demo**
 
-To build the app, run:
+Deploy to <TODO:> [Here](http://TODO:1000). (Allow spin-up time... :grin:)
 
-```bash
-npm run build
-npm run export
-```
+Feel free to have a play
 
-All the client side files will be sent to the `./out/` directory. These files need to be copied to the native iOS and Android projects, and this is where Capacitor comes in:
+## **Install**
 
-```bash
-npx cap copy
-```
+Must have the following installed on your machine.
 
-Finally, to run the app, open the Native IDE for the platform and follow the IDE's run process (note: a CLI run [will be available in Capacitor 3](https://capacitorjs.com/blog/announcing-capacitor-3-0-beta):
+- node
+- npm
+- Android development [Android Studio](https://developer.android.com/studio)
+- IOS development on **Mac** requires Xcode 11 or above.
+- IOS development on **Windows** [Ionic Appflow](https://ionic.io/appflow) or other alternative emulator
 
-```
-npx cap open ios
-npx cap open android
-```
+</br>
 
-## Livereload/Instant Refresh
+### **Initial Setup**
 
-To enable Livereload and Instant Refresh during development (when running `npm run dev`), find the IP address of your local interface (ex: `192.168.1.2`) and port your Next.js server is running on, and then set the server url config value to point to it in `capacitor.config.json`:
+There are a few steps that need to be following in order to get this project to initialise succesfully.
 
-```json
-{
-  "server": {
-    "url": "http://192.168.1.2:3000"
-  }
-}
-```
+</br>
 
-Note: this configuration wil be easier in Capacitor 3 which [recently went into beta](https://capacitorjs.com/blog/announcing-capacitor-3-0-beta).
+First we need the Ionic Client.
 
-## Caveats
+- `npm install -g @ionic/cli`
 
-One caveat with this project: Because the app must be able to run purely client-side and use [Next.js's Export command](https://nextjs.org/docs/advanced-features/static-html-export), that means no Server Side Rendering in this code base. There is likely a way to SSR and a fully static Next.js app in tandem but it requires [a Babel plugin](https://github.com/erzr/next-babel-conditional-ssg-ssr) or would involve a more elaborate monorepo setup with code sharing that is out of scope for this project.
+</br>
 
-Additionally, Next.js routing is not really used much in this app beyond a catch-all route to render the native app shell and engage the Ionic React Router. This is primarily because Next.js routing is not set up to enable native-style transitions and history state management like the kind Ionic uses. 
+Now lets install all the dependencies.
 
-## What is Capacitor?
+- `npm i`
 
-You can think of [Capacitor](https://capacitorjs.com/) as a sort of "electron for mobile" that runs standard web apps on iOS, Android, Desktop, and Web.
+</br>
 
-Capacitor provides access to Native APIs and a plugin system for building any native functionality your app needs.
+We will then need to run the build which will create the .next build folder in or project.
 
-Capacitor apps can also run in the browser as a Progressive Web App with the same code.
-.
+- `npm run build`
+
+</br>
+
+
+This next step is crucial!
+We to export our build as static which can be run standalone without the need of a Node.js server.
+But also it creates the out directory that we need before we can include our native device builds.
+
+- `npm run export`
+
+</br>
+
+Ok so now we can let Capacitor which platforms we want to build on.
+
+- `npx cap add ios`
+- `npx cap add android`
+
+</br>
+
+Time to rebuild nextjs, export it, and copy it to the native projects.
+
+- `npm run build`
+- `npm run export`
+- `npx cap copy`
+
+</br>
+
+### **Test Builds**
+
+</br>
+
+[Test Web:](https://nextjs.org/docs/api-reference/cli#production)
+
+- `npm run start`
+
+</br>
+
+[Test IOS:](https://capacitorjs.com/docs/getting-started/dependencies#ios-development)
+
+- `npx cap open ios`
+
+</br>
+
+[Test Android:](https://capacitorjs.com/docs/getting-started/dependencies#android-development)
+
+- `npx cap open android`
+
+## Tadaa!
+
+</br>
+
+## Running App Environments
+
+- Cross Platform Development: `npm run dev`
+
+- Web Production: `npm run start`
+
+- IOS Emulator (Mac Only): `npx cap open ios`
+
+- Andriod Emulator: `npx cap open android`
+
+</br>
+
+# **Development**
+
+When adding plugins to Capacitor it is essential that you perform the following command
+
+- `npx cap sync`
+
+</br>
+
+## Reading List
+
+- [Capacitor Workflow](https://capacitorjs.com/docs/basics/workflow)
+- [Using Cordova Plugins and Ionic Native](https://capacitorjs.com/docs/cordova/using-cordova-plugins)
+
