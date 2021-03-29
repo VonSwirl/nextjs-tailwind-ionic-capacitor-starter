@@ -9,6 +9,4 @@
   
   <preference name="HEALTH_READ_PERMISSION" value="App needs read access" />
   <preference name="HEALTH_WRITE_PERMISSION" value="App needs write access" />
-  <preference name="PLAY_AUTH_VERSION" value="18.1.0" />
-  <preference name="FIT_API_VERSION" value="19.0.0" />
 </widget>

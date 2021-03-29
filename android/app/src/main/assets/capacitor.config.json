@@ -12,9 +12,7 @@
   "cordova": {
     "preferences": {
       "HEALTH_READ_PERMISSION": "App needs read access",
-      "HEALTH_WRITE_PERMISSION": "App needs write access",
-      "PLAY_AUTH_VERSION": "18.1.0",
-      "FIT_API_VERSION": "19.0.0"
+      "HEALTH_WRITE_PERMISSION": "App needs write access"
     }
   }
 }

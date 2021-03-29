@@ -10,7 +10,6 @@ android {
 apply from: "../capacitor-cordova-android-plugins/cordova.variables.gradle"
 dependencies {
     implementation project(':capacitor-dark-mode')
-    implementation project(':capacitor-google-fit')
     implementation "com.google.android.gms:play-services-fitness:19.0.0"
     implementation "com.google.android.gms:play-services-auth:18.1.0"
 }
