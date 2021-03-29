@@ -151,9 +151,12 @@ When adding plugins to Capacitor it is essential that you perform the following 
 - `npx cap sync`
 
 </br>
-````
 
 # **Notes**
+
+- To locate Cordova to Capacitor plugin values search for: `cor-cap-vals` .
+
+- Adding anymore cordova plugin value? Please ensure to add the `cor-cap-vals` comment.
 
 - To use the Google Fit for Android, you need an OAuth 2.0 client ID for Android applications. [Link1](https://developers.google.com/fit/android/get-api-key).
 

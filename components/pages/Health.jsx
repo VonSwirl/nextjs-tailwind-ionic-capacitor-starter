@@ -15,9 +15,21 @@ import Store from '../../store';
 import Notifications from './Notifications';
 import { getHomeItems } from '../../store/selectors';
 
-const Health = () => {
+import {
+  Health,
+  // HealthData,
+  // HealthDataType,
+  // HealthOriginal,
+  // HealthQueryOptions,
+  // HealthQueryOptionsAggregated,
+  // HealthStoreOptions,
+} from '@ionic-native/health';
+
+const HealthPage = () => {
   const homeItems = Store.useState(getHomeItems);
   const [showNotifications, setShowNotifications] = useState(false);
+
+  console.log(Health.isAuthorized());
 
   return (
     <IonPage>
@@ -49,4 +61,4 @@ const Health = () => {
   );
 };
 
-export default Health;
+export default HealthPage;

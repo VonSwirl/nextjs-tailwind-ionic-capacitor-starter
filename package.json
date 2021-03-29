@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build:all": "sh ./scripts/all.sh",
+    "sync": "npx cap copy && npx cap sync;",
     "dev": "next dev",
     "dev:network": "sh ./scripts/network.sh",
     "dev:android": "sh ./scripts/dev-android.sh",
