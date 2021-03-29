@@ -17,7 +17,7 @@ _Stack Framework Layers_
 
 ## **Demo**
 
-Deploy to <TODO:> [Here](http://TODO:1000). (Allow spin-up time... :grin:)
+Deploy to <TODO:> [Here](https://example.com). (Allow spin-up time... :grin:)
 
 Feel free to have a play
 
@@ -152,3 +152,11 @@ When adding plugins to Capacitor it is essential that you perform the following 
 
 </br>
 ````
+
+# **Notes**
+
+- To use the Google Fit for Android, you need an OAuth 2.0 client ID for Android applications. [Link1](https://developers.google.com/fit/android/get-api-key).
+
+- Cordova Capacitor pluigin variables. [Link1](https://www.joshmorony.com/using-cordova-plugins-that-require-install-variables-with-capacitor/)
+
+- Cordova Capacitor Deep Dive. [Link1](https://www.joshmorony.com/migrating-cordova-plugins-to-capacitor-android/)
