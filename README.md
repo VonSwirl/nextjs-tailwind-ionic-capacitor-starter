@@ -2,7 +2,7 @@
 
 ## **Description**
 
-This is an Ionic - Nextjs - Tailwind - Capacitor App for educational purposes.
+This is an Ionic - Nextjs - Tailwind - Capacitor App.
 
 ## Reading List
 
@@ -10,63 +10,28 @@ This is an Ionic - Nextjs - Tailwind - Capacitor App for educational purposes.
 - [Capacitor Workflow](https://capacitorjs.com/docs/basics/workflow)
 - [Using Cordova Plugins and Ionic Native](https://capacitorjs.com/docs/cordova/using-cordova-plugins)
 
-</br>
+#
 
-_Stack Framework Layers_
-</br>
+**_Stack Framework Layers_**
 
 <img src="https://user-images.githubusercontent.com/24437988/112493886-739b0d80-8d7a-11eb-8dc4-158c3938fb99.png" alt="example" width="500"/>
 
-## **Demo**
+## **Requirements**
 
-Deploy to <TODO:> [Here](https://example.com). (Allow spin-up time... :grin:)
-
-Feel free to have a play
-
-## **Install**
-
-Must have the following installed on your machine.
-
-- node
-- npm
-- Android development [Android Studio](https://developer.android.com/studio)
-- IOS development on **Mac** requires Xcode 11 or above.
-- IOS development on **Windows** [Ionic Appflow](https://ionic.io/appflow) or other alternative emulator
+- [nodejs & npm](https://nodejs.org/en/)
+- Android on **Mac & Windows** requires [Android Studio](https://developer.android.com/studio)
+- IOS on **Mac** requires [Xcode](https://developer.apple.com/xcode/) 11 or above.
+- IOS on **Windows** requires [Ionic Appflow](https://ionic.io/appflow) or other alternative IOS emulator.
 
 </br>
 
-### **Initial Setup**
+## **Setup Part 1**
 
-There are 6 steps that need to be following in order to get this project to initialise succesfully.
+There are **6** steps to follow to initialise this project.
 
-Note: The steps follow can be triggered with command a single command: `npm run build:all`
+**OR** Simply use command **_`npm run build:all`_** to run all the init steps. Once finished you can proceed to **Setup Part 2**
 
-Caveat: After everything is built open file `./android/app/build.gradle`
-
-Then you will see an object
-
-```gradle
-android {
-   ...
-   defaultConfig {
-      ...
-   }
-}
-```
-
-Now add this block INSIDE defaultConfig (If not already there)
-
-```gradle
-aaptOptions {
-   // Without this Android apps just wont work... Read more:
-   // https://github.com/ionic-team/capacitor/commit/c23d99315acea2f0894e5ff8a08dd42a867b2982
-   ignoreAssetsPattern '!.svn:!.git:!.ds_store:!_.scc:._:!CVS:!thumbs.db:!picasa.ini:!*~'
-}
-```
-
-Read More: [TL;DR](https://github.com/ionic-team/capacitor/commit/c23d99315acea2f0894e5ff8a08dd42a867b2982)
-
-</br>
+Open /capacitor-android/manifests/AndroidManifest.xml and make sure your XML config contains the following:
 
 1. First we need the Ionic Client.
 
@@ -110,65 +75,59 @@ Read More: [TL;DR](https://github.com/ionic-team/capacitor/commit/c23d99315acea2
 
 </br>
 
-### **Test Builds**
+## Setup Part 2
+
+**Now all is built we need to add some code manually.**
+
+Open file `./android/app/build.gradle`, you will see something similiar to:
+
+```gradle
+android {
+   ...
+   defaultConfig {
+      ...
+   }
+}
+```
+
+Add the code below inside **defaultConfig**, If its not already there.
+
+```gradle
+aaptOptions {
+   // Without this Android apps just wont work... Read more:
+   // https://github.com/ionic-team/capacitor/commit/c23d99315acea2f0894e5ff8a08dd42a867b2982
+   ignoreAssetsPattern '!.svn:!.git:!.ds_store:!_.scc:._:!CVS:!thumbs.db:!picasa.ini:!*~'
+}
+```
+
+# Environments Commands
+
+## Development
+
+- Web: `npm run dev:web`
+- IOS (Mac): `npm run dev:ios`
+- IOS (Windows): Ionic Appflow or alternative
+- Android: `npm run dev:android`
+- Web on LAN Network: `npm run dev:network`
+
+## Production
+
+- Web: `npm run start`
+- IOS: This will need to be handled via Xcode or Ionic Appflow.
+- Android: This is handled in Android Studio apk release.
 
 </br>
 
-[Test Web:](https://nextjs.org/docs/api-reference/cli#production)
+# **Important Notes**
 
-- `npm run start`
-
-</br>
-
-[Test IOS:](https://capacitorjs.com/docs/getting-started/dependencies#ios-development)
-
-- `npx cap open ios`
-
-</br>
-
-[Test Android:](https://capacitorjs.com/docs/getting-started/dependencies#android-development)
-
-- `npx cap open android`
-
-## Tadaa!
-
-</br>
-
-## Running App Environments
-
-- Cross Platform Development: `npm run dev`
-
-- Web Production: `npm run start`
-
-- IOS Emulator (Mac Only): `npx cap open ios`
-
-- Andriod Emulator: `npx cap open android`
-
-</br>
-
-# **Development**
-
-When adding plugins to Capacitor it is essential that you perform the following command
-
-- `npx cap sync`
-
-</br>
-
-# **Notes**
-
-- To locate Cordova to Capacitor plugin values search for: `cor-cap-vals` .
-
-- Adding anymore cordova plugin value? Please ensure to add the `cor-cap-vals` comment.
-
+- When adding a new Capacitor plugin it is essential that you perform the following command: `npx cap sync`
 - To use the Google Fit for Android, you need an OAuth 2.0 client ID for Android applications. [Link1](https://developers.google.com/fit/android/get-api-key).
-
-- Cordova Capacitor pluigin variables. [Link1](https://www.joshmorony.com/using-cordova-plugins-that-require-install-variables-with-capacitor/)
-
+- Cordova Capacitor plugin variables. [Link1](https://www.joshmorony.com/using-cordova-plugins-that-require-install-variables-with-capacitor/)
 - Cordova Capacitor Deep Dive. [Link1](https://www.joshmorony.com/migrating-cordova-plugins-to-capacitor-android/)
 
 </br>
 
-# **PRODUCTION**
+# **Production**
 
 ## You MUST remove this from **capacitor.config.json** file
 
@@ -177,3 +136,9 @@ When adding plugins to Capacitor it is essential that you perform the following 
     "url": "http://192.168.0.44:3000"
   }
 ```
+
+## Production Reading:
+
+- [Next Web App:](https://nextjs.org/docs/api-reference/cli#production)
+- [Capacitor IOS App:](https://capacitorjs.com/docs/getting-started/dependencies#ios-development)
+- [Capacitor Android App:](https://capacitorjs.com/docs/getting-started/dependencies#android-development)
