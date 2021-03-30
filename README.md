@@ -13,7 +13,9 @@ This is an Ionic - Nextjs - Tailwind - Capacitor App for educational purposes.
 </br>
 
 _Stack Framework Layers_
-![layers](https://user-images.githubusercontent.com/24437988/112493886-739b0d80-8d7a-11eb-8dc4-158c3938fb99.png)
+</br>
+
+<img src="https://user-images.githubusercontent.com/24437988/112493886-739b0d80-8d7a-11eb-8dc4-158c3938fb99.png" alt="example" width="500"/>
 
 ## **Demo**
 
@@ -56,8 +58,8 @@ Now add this block INSIDE defaultConfig (If not already there)
 
 ```gradle
 aaptOptions {
-   // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
-   // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
+   // Without this Android apps just wont work... Read more:
+   // https://github.com/ionic-team/capacitor/commit/c23d99315acea2f0894e5ff8a08dd42a867b2982
    ignoreAssetsPattern '!.svn:!.git:!.ds_store:!_.scc:._:!CVS:!thumbs.db:!picasa.ini:!*~'
 }
 ```
@@ -163,3 +165,15 @@ When adding plugins to Capacitor it is essential that you perform the following 
 - Cordova Capacitor pluigin variables. [Link1](https://www.joshmorony.com/using-cordova-plugins-that-require-install-variables-with-capacitor/)
 
 - Cordova Capacitor Deep Dive. [Link1](https://www.joshmorony.com/migrating-cordova-plugins-to-capacitor-android/)
+
+</br>
+
+# **PRODUCTION**
+
+## You MUST remove this from **capacitor.config.json** file
+
+```json
+  "server": {
+    "url": "http://192.168.0.44:3000"
+  }
+```
