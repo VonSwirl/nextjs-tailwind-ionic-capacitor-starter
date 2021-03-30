@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <access origin="*" />
+  
+  <feature name="health">
+    <param name="android-package" value="org.apache.cordova.health.HealthPlugin"/>
+  </feature>
+
+  
+  <preference name="HEALTH_READ_PERMISSION" value="App needs read access" />
+  <preference name="HEALTH_WRITE_PERMISSION" value="App needs write access" />
+</widget>

@@ -1,0 +1,21 @@
+{
+  "appId": "ionic.next.alpha",
+  "appName": "Ionic Next",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "out",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {
+    "preferences": {
+      "HEALTH_READ_PERMISSION": "App needs read access",
+      "HEALTH_WRITE_PERMISSION": "App needs write access"
+    }
+  },
+  "server": {
+    "url": "http://192.168.0.44:3000"
+  }
+}
