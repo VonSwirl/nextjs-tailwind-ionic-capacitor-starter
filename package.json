@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "next build && next start",
+    "build": "next build",
     "build:all": "sh ./scripts/all.sh",
+    "export": "next export",
     "sync": "npx cap copy && npx cap sync;",
     "dev": "next dev",
     "dev:network": "sh ./scripts/network.sh",
     "dev:android": "sh ./scripts/dev-android.sh",
     "dev:ios": "sh ./scripts/dev-ios.sh",
-    "build": "next build",
-    "start": "next build && next start",
-    "export": "next export"
+    "dev:web": "next dev"
   },
   "dependencies": {
     "@capacitor/android": "^2.4.7",
