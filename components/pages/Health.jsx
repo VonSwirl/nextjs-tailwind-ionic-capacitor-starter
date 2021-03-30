@@ -15,21 +15,13 @@ import Store from '../../store';
 import Notifications from './Notifications';
 import { getHomeItems } from '../../store/selectors';
 
-import {
-  Health,
-  // HealthData,
-  // HealthDataType,
-  // HealthOriginal,
-  // HealthQueryOptions,
-  // HealthQueryOptionsAggregated,
-  // HealthStoreOptions,
-} from '@ionic-native/health';
+// import { Health } from '@ionic-native/health';
 
-const HealthPage = () => {
+const HealthPage = async () => {
   const homeItems = Store.useState(getHomeItems);
   const [showNotifications, setShowNotifications] = useState(false);
 
-  console.log(Health.isAuthorized());
+  // const para1 = await Health.isAuthorized();
 
   return (
     <IonPage>
@@ -49,13 +41,15 @@ const HealthPage = () => {
       <IonContent className="ion-padding" fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Feed</IonTitle>
+            <IonTitle size="large">Health</IonTitle>
           </IonToolbar>
         </IonHeader>
         <Notifications open={showNotifications} onDidDismiss={() => setShowNotifications(false)} />
-        {homeItems.map((i, index) => (
-          <div>{index}</div>
-        ))}
+        {/* {homeItems.map((i, index) => (
+          <div>
+            <p>WHAT! </p>
+          </div>
+        ))} */}
       </IonContent>
     </IonPage>
   );
