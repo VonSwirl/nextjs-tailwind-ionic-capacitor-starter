@@ -19,6 +19,7 @@
     "@capacitor/cli": "^2.4.5",
     "@capacitor/core": "^2.4.5",
     "@capacitor/ios": "^2.4.5",
+    "@ionic-native/health": "^5.31.1",
     "@ionic/react": "^5.5.2",
     "@ionic/react-router": "^5.5.2",
     "autoprefixer": "^10.1.0",
