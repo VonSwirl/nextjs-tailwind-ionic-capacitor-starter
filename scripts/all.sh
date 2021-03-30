@@ -16,7 +16,7 @@ echo "Installing Dependencies";
 echo "-----------------------";
 sleep 2;
 npm i;
-echo "\n------------";
+echo "\n-------------";
 echo "Running Build";
 echo "-------------";
 sleep 2;
@@ -58,8 +58,7 @@ then
   echo "  --> Yes. Rebuilding now";
   sleep 3;
   next build &&
-  next export &&
-  npx cap copy;
+  next export;
   sleep 2; 
   echo "\nSyncing Capacitor Now...\n";
   sleep 2; 
@@ -69,7 +68,6 @@ else
   sleep 1;
   echo "  --> No. Syncing Capacitor Now...";
   sleep 3;
-  npx cap copy &&
   npx cap sync;
 fi
 

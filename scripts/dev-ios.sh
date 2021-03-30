@@ -15,14 +15,15 @@ then
   echo "      npm run build:all";
 else
   echo "  --> IOS App Found";
+  echo "  --> Building and Syncing";
   echo "";
   sleep 2;
-  npx cap sync ios && npx cap open ios;
+  npx next build && npx next export && npx cap sync ios && npx cap open ios;
   echo "";
-  echo "----";
+  echo "-----------------";
   echo "IOS OPENED IN IDE";
-  echo "";
-  echo "----";
+  echo "-----------------";
+
 
 fi
 sleep 1;

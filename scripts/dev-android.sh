@@ -15,9 +15,10 @@ then
   echo "      npm run build:all";
 else
   echo "  --> Android App Found";
+  echo "  --> Building and Syncing";
   echo "";
   sleep 2;
-  npx cap sync android && npx cap open android;
+  npx next build && npx next export && npx cap sync android && npx cap open android;
   echo "";
   echo "----------------------";
   echo "ANDROID OPENED IN IDE";
