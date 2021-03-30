@@ -23,6 +23,7 @@
     "@ionic/react-router": "^5.5.2",
     "autoprefixer": "^10.1.0",
     "capacitor-dark-mode": "^1.0.5",
+    "capacitor-google-fit": "^0.2.3",
     "classnames": "^2.2.6",
     "next": "10.0.3",
     "postcss": "^8.2.1",
@@ -34,6 +35,8 @@
     "then": "^0.0.1"
   },
   "devDependencies": {
+    "@ionic/eslint-config": "^0.3.0",
+    "eslint": "^7.23.0",
     "ionicons": "^5.2.3",
     "prettier": "^2.2.1",
     "pullstate": "^1.20.5",
