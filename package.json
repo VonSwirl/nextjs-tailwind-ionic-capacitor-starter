@@ -3,28 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "update:caniuse": "npx browserslist@latest --update-db yes",
-    "prestart": "npx browserslist@latest --update-db yes",
-    "dev": "next dev",
-    "dev:lan": "sh ./LAN-server.sh",
-    "build": "next build",
     "start": "next build && next start",
-    "export": "next export"
+    "build": "next build",
+    "build:all": "sh ./scripts/all.sh",
+    "export": "next export",
+    "sync": "npx cap copy && npx cap sync;",
+    "dev": "next dev",
+    "dev:network": "sh ./scripts/network.sh",
+    "dev:android": "sh ./scripts/dev-android.sh",
+    "dev:ios": "sh ./scripts/dev-ios.sh",
+    "dev:web": "next dev"
   },
   "dependencies": {
-    "@capacitor/android": "^2.4.6",
+    "@capacitor/android": "^2.4.7",
     "@capacitor/cli": "^2.4.5",
     "@capacitor/core": "^2.4.5",
     "@capacitor/ios": "^2.4.5",
     "@ionic-native/health": "^5.31.1",
-    "@ionic-native/health-kit": "^5.31.1",
     "@ionic/react": "^5.5.2",
     "@ionic/react-router": "^5.5.2",
     "autoprefixer": "^10.1.0",
     "capacitor-dark-mode": "^1.0.5",
-    "capacitor-google-fit": "^0.2.3",
     "classnames": "^2.2.6",
-    "com.telerik.plugins.healthkit": "^0.7.0",
     "cordova-plugin-health": "^2.0.0",
     "next": "10.0.3",
     "postcss": "^8.2.1",
@@ -32,7 +32,8 @@
     "react-dom": "17.0.1",
     "react-router-dom": "^5.2.0",
     "react-virtuoso": "^1.1.1",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.0.2",
+    "then": "^0.0.1"
   },
   "devDependencies": {
     "ionicons": "^5.2.3",
