@@ -1,4 +1,4 @@
-package nextjs.tailwind.capacitor.ionic;
+package ionic-next-alpha;
 
 import android.os.Bundle;
 

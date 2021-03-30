@@ -14,14 +14,30 @@ import { notificationsOutline } from 'ionicons/icons';
 import Store from '../../store';
 import Notifications from './Notifications';
 import { getHomeItems } from '../../store/selectors';
+import { health } from '../../Health/health';
 
-// import { Health } from '@ionic-native/health';
-
-const HealthPage = async () => {
+const Testing = () => {
   const homeItems = Store.useState(getHomeItems);
+
+  return (
+    <>
+      {homeItems.map((x, i) => (
+        <div key={i}>{i}</div>
+      ))}
+    </>
+  );
+};
+const HealthPage = () => {
   const [showNotifications, setShowNotifications] = useState(false);
 
-  // const para1 = await Health.isAuthorized();
+  health();
+
+  if (typeof window !== undefined) {
+    const platform = window.platform;
+    console.log({ platform });
+  } else {
+    console.log('nooooooooooo');
+  }
 
   return (
     <IonPage>
@@ -45,11 +61,7 @@ const HealthPage = async () => {
           </IonToolbar>
         </IonHeader>
         <Notifications open={showNotifications} onDidDismiss={() => setShowNotifications(false)} />
-        {/* {homeItems.map((i, index) => (
-          <div>
-            <p>WHAT! </p>
-          </div>
-        ))} */}
+        <Testing />
       </IonContent>
     </IonPage>
   );

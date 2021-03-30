@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">nextjs-tailwind-capacitor</string>
     <string name="title_activity_main">nextjs-tailwind-capacitor</string>
-    <string name="package_name">nextjs.tailwind.capacitor.ionic</string>
-    <string name="custom_url_scheme">nextjs.tailwind.capacitor.ionic</string>
+    <string name="package_name">ionic-next-alpha</string>
+    <string name="custom_url_scheme">ionic-next-alpha</string>
 </resources>
