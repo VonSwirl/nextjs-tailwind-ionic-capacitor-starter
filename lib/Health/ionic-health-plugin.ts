@@ -1,4 +1,4 @@
-import { Health } from "@ionic-native/health";
+// import { Health } from "@ionic-native/health";
 import { Capacitor } from "@capacitor/core";
 const isAvailable = Capacitor.isPluginAvailable("Health");
 
