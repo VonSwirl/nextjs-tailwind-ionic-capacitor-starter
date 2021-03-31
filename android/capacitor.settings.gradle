@@ -4,6 +4,3 @@ project(':capacitor-android').projectDir = new File('../node_modules/@capacitor/
 
 include ':capacitor-dark-mode'
 project(':capacitor-dark-mode').projectDir = new File('../node_modules/capacitor-dark-mode/android')
-
-include ':capacitor-google-fit'
-project(':capacitor-google-fit').projectDir = new File('../node_modules/capacitor-google-fit/android')

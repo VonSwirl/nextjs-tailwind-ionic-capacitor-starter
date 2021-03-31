@@ -44,6 +44,8 @@
 
     <!-- Permissions -->
 
+
+
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- Camera, Photos, input file -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
@@ -60,4 +62,7 @@
     <!-- Audio -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <!-- Activitys Rec -->
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
 </manifest>

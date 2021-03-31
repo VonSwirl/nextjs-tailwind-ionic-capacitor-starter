@@ -14,15 +14,16 @@ import { notificationsOutline } from "ionicons/icons";
 import Store from "../../store";
 import Notifications from "./Notifications";
 import { getHomeItems } from "../../store/selectors";
-import { health } from "../../Health/health";
+import { ionicHealthPlugin } from "../../lib/Health";
 
 const Testing = () => {
 	const homeItems = Store.useState(getHomeItems);
+	homeItems.push({});
 
 	return (
 		<>
 			{homeItems.map((x, i) => (
-				<div key={i}>{i}</div>
+				<div key={i}>{"Healthy " + i}</div>
 			))}
 		</>
 	);
@@ -30,7 +31,7 @@ const Testing = () => {
 const HealthPage = () => {
 	const [showNotifications, setShowNotifications] = useState(false);
 
-	health();
+	ionicHealthPlugin();
 
 	return (
 		<IonPage>

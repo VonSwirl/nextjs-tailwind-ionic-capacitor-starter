@@ -1,7 +1,7 @@
 sleep 1;
 echo "";
 echo "STARTING IOS";
-echo "------------------";
+echo "------------";
 echo "";
 sleep 1;
 echo "Checking for IOS App:";
@@ -18,13 +18,16 @@ else
   echo "  --> Building and Syncing";
   echo "";
   sleep 2;
-  npx next build && npx next export && npx cap sync ios && npx cap open ios;
+  npx cap sync ios && npx cap open ios;
   echo "";
   echo "-----------------";
   echo "IOS OPENED IN IDE";
   echo "-----------------";
-
-
-fi
-sleep 1;
-echo "";
+  sleep 1;
+  # Start server
+  npm run dev
+  echo "";
+  echo "----------------------";
+  echo "Starting Host Server";
+  echo "----------------------";
+  sleep 1;

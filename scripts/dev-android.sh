@@ -1,7 +1,7 @@
 sleep 1;
 echo "";
 echo "STARTING ANDROID";
-echo "------------------";
+echo "----------------";
 echo "";
 sleep 1;
 echo "Checking for Android App:";

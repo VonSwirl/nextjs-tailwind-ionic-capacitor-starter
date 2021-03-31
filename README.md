@@ -142,3 +142,8 @@ aaptOptions {
 - [Next Web App:](https://nextjs.org/docs/api-reference/cli#production)
 - [Capacitor IOS App:](https://capacitorjs.com/docs/getting-started/dependencies#ios-development)
 - [Capacitor Android App:](https://capacitorjs.com/docs/getting-started/dependencies#android-development)
+
+  // "server": {
+  // "url": "http://localhost:2222",
+  // "cleartext": true
+  // }
